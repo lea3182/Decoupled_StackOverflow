@@ -9,8 +9,10 @@ $(document).ready(function() {
     dataType: 'JSON',
     method: 'get'
   }).done(function(response){
-    console.log(response);
-  }
-  )
+    console.log(response)
+    for (var i = 0; i < response.length; i++) {
+      $('div').append('<p>' + response[i].title + '</p>');
+    }
+  })
 
 });
