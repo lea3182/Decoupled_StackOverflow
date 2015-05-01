@@ -4,4 +4,13 @@ $(document).ready(function() {
   // when we try to bind to them
 
   // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+  $.ajax({
+    url: 'http://localhost:3000/questions',
+    dataType: 'JSON',
+    method: 'get'
+  }).done(function(response){
+    console.log(response);
+  }
+  )
+
 });
